@@ -45,7 +45,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapmi
 
 # app = Dash(__name__)
 app = Dash(__name__, external_stylesheets=estilos)
-# app = Dash(__name__, external_stylesheets=estilos + [dbc.themes.VAPOR])
+
 app.config['suppress_callback_exceptions'] = True
 app.scripts.config.serve_locally = True
 server = app.server
@@ -880,7 +880,7 @@ import pandas as pd
 # ========= Layout ========= #
 layout_sidebar = dbc.Card([
     html.H1("MyBudget", className="text-primary"),
-    html.P("By ASIMOV", className="text-info"),
+    html.P("By DanteDerette", className="text-info"),
     html.Hr(),
 
     # Seção PERFIL -------------------
@@ -1398,11 +1398,8 @@ app.layout = dbc.Container(children=[
 
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
-    if pathname == "/painel":
+    if pathname == "/painel" or pathname == "/":
         return layout_Dash
-
-    if pathname == "/":
-        return('<h1>HELLO World</h1>')
 
     if pathname == "/extratos":
         return layout_extrato
