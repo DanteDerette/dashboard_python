@@ -8,7 +8,7 @@ from datetime import datetime
 
 estilos = ["https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",
            "https://use.fontawesome.com/releases/v5.15.3/css/all.css",
-           "https://fonts.googleapis.com/icon?family=Material+Icons", dbc.themes.COSMO]
+           "https://fonts.googleapis.com/icon?family=Material+Icons", dbc.themes.VAPOR]
 
 dbc_css = "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates@V1.0.4/dbc.min.css"
 
