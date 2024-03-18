@@ -1398,8 +1398,11 @@ app.layout = dbc.Container(children=[
 
 @app.callback(Output("page-content", "children"), [Input("url", "pathname")])
 def render_page_content(pathname):
-    if pathname == "/" or pathname == "/painel":
+    if pathname == "/painel":
         return layout_Dash
+
+    if pathname == "/":
+        return('<h1>HELLO World</h1>')
 
     if pathname == "/extratos":
         return layout_extrato
